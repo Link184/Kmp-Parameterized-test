@@ -1,0 +1,28 @@
+[versions]
+agp = "8.4.1"
+kotlin = "2.0.0"
+compose-material3 = "1.1.2"
+androidx-activityCompose = "1.8.0"
+google-devtools-ksp = "2.0.0-1.0.21"
+kotlin-poet = "1.17.0"
+
+[libraries]
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
+compose-ui = { module = "androidx.compose.ui:ui", version.ref = "kotlin" }
+compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "kotlin" }
+compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "kotlin" }
+compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "kotlin" }
+compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "compose-material3" }
+devtoolsKsp-processing-api = { module = "com.google.devtools.ksp:symbol-processing-api", version.ref = "google-devtools-ksp" }
+kotlin-poet = { module = "com.squareup:kotlinpoet", version.ref = "kotlin-poet" }
+kotlin-poet-ksp = { module = "com.squareup:kotlinpoet-ksp", version.ref = "kotlin-poet" }
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlinCocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
+devtoolsKsp = { id = "com.google.devtools.ksp", version.ref = "google-devtools-ksp" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
