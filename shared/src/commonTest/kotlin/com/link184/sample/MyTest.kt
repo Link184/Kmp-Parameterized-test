@@ -1,15 +1,32 @@
 package com.link184.sample
 
-import kotlin.test.Test
+import com.link184.parameterized.compiler.ParameterizedTest
+import com.link184.parameterized.compiler.Parameters
+import com.link184.sample.complex.model.ComplexObject
+import org.junit.runners.Parameterized
 
-annotation class MyField
+@Parameterized.Parameters
+fun params() {
 
-class MyTest {
+}
 
-    @MyField
+
+@Parameters()
+fun myTopLevelDeclarationParams() = arrayOf<Any>()
+
+@ParameterizedTest
+class MyTest(
+    val input: String,
+    val output: ComplexObject
+) {
+
+    @Parameters
+    fun myClassParams() {
+
+    }
+
     lateinit var myField: String
 
-    @Test
     fun test() {
 
 
@@ -17,4 +34,3 @@ class MyTest {
     }
 }
 
-//class TestRunner: TestE
